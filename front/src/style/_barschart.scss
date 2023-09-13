@@ -1,0 +1,24 @@
+.barsChart{
+	     &__legend{
+	         display: flex;
+	         justify-content: space-around;
+	        padding: 20px;
+	    }
+	     &__activity{
+	        font-weight: 500;
+	        font-size: 15px;
+	        line-height: 24px;
+	       color: #20253A;
+	    }
+	    &__legend-list{
+	        display: flex;
+	        gap: 50px;
+	    }
+     &__legend-item{
+	        position: relative;
+	         font-weight: 500;
+	        font-size: 14px;
+	        line-height: 24px;
+	        color: #74798C;
+	     }
+	}
