@@ -5,20 +5,6 @@ import formatData from "../services/FormatData";
 import '../style/_barschart.scss';
 
 
-/*const formatDataBarsChart = (data) => {
-  let formatedSessions = [];
-  for(let i = 0; i < data.sessions.length; i++){
-    const sessions = data.sessions[i];
-    const { kilogram, calories } = sessions;
-    formatedSessions.push({
-      day: i+1,
-      kg: kilogram,
-      calories: calories
-    })
-  }
-  return formatedSessions
-}*/
-
 const CustomToolTip = ({active, payload}) => {
   if(active){
     return (

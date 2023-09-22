@@ -229,11 +229,12 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 63px;
-  width: 39px;
-  font-size: 7px;
+  height: 90px;
+  width: 60px;
+  font-size: 10px;
   background-color: #E60000;
   color: #FFFFFF;
+  font-weight: bold;
 }
 
 .error {
