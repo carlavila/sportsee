@@ -1,46 +1,37 @@
-// UserModel.js
-class UserModel {
-	constructor(data) {
-	  this.userId = data.userId;
-	  this.userInfos = data.userInfos;
-	  this.todayScore = data.todayScore;
-	  this.keyData = data.keyData;
+// User data model
+class UserData {
+	constructor(id, userInfos, todayScore, keyData) {
+	  this.id = id;
+	  this.userInfos = userInfos;
+	  this.todayScore = todayScore;
+	  this.keyData = keyData;
 	}
       }
       
-      // ActivityModel.js
-      class ActivityModel {
-	constructor(data) {
-	  this.userId = data.userId;
-	  this.sessions = data.sessions.map(session => ({
-	    day: session.day,
-	    kilogram: session.kilogram,
-	    calories: session.calories,
-	  }));
+      // User Performance data model
+      class UserPerformanceData {
+	constructor(userId, data,kind) {
+	  this.userId = userId;
+	  this.data = data;
+	  this.kind = kind
 	}
       }
       
-      // PerformanceModel.js
-      class PerformanceModel {
-	constructor(data) {
-	  this.userId = data.userId;
-	  this.data = data.data.map(item => ({
-	    value: item.value,
-	    kind: item.kind,
-	  }));
+      // User Average Session data model
+      class UserAvgSessionData {
+	constructor(userId, sessions) {
+	  this.userId = userId;
+	  this.sessions = sessions;
 	}
       }
       
-      // AvgSessionModel.js
-      class AvgSessionModel {
-	constructor(data) {
-	  this.userId = data.userId;
-	  this.sessions = data.sessions.map(session => ({
-	    day: session.day,
-	    sessionLength: session.sessionLength,
-	  }));
+      // User Activity data model
+      class UserActivityData {
+	constructor(userId, sessions) {
+	  this.userId = userId;
+	  this.sessions = sessions;
 	}
       }
-      
-      export { UserModel, ActivityModel, PerformanceModel, AvgSessionModel };
+
+      export { UserData, UserPerformanceData, UserAvgSessionData, UserActivityData };
       
