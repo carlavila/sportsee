@@ -64,6 +64,10 @@ export default class formatData {
 	}
 	return dataRadarChart;
       };
+
+      formatedDataRadial = (score) => {
+        return [{ value : score * 100}];
+    }
       
     }
       
