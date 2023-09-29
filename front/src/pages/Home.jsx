@@ -7,7 +7,6 @@ import LineChart from "../components/LineChart/LineChart";
 import RadarChart from "../components/RadarChart/RadarChart";
 import RadialChart from "../components/RadialChart/RadialChart";
 import NutritionCard from "../components/NutritionCard/NutritionCard";
-import "../style/style.scss";
 import {UserData} from "../models/UserData/UserData";
 import {UserPerformanceData} from "../models/UserPerformance/UserPerformance";
 import {UserActivityData} from "../models/UserActivity/UserActivity";
@@ -16,6 +15,7 @@ import calories from '../assets/calories.png'
 import proteins from '../assets/proteins.png'
 import glucides from '../assets/glucides.png'
 import lipids from '../assets/lipids.png'
+import "../style/pages/home.scss";
 
 
 const Home = () => {

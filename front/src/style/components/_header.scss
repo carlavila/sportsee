@@ -1,0 +1,23 @@
+@import '../index.scss';
+
+.header {
+    display: flex;
+    background-color: $header-bg-color;
+    padding: 20px 15px;
+    img{
+        width: 178px;
+        height: 60.93px;
+        margin-left: 10px;
+    }
+    &__nav{
+        width: 100%;
+    }
+    &__ul{
+        @include flex(row, space-evenly, center);
+        height: 100%;
+    }
+    &__li{
+        color: $navBar-txt-color;
+        font-size: 24px;
+    }
+}

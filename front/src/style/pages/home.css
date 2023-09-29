@@ -1,0 +1,305 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+main {
+  display: flex;
+}
+
+.profile {
+  width: 90%;
+  margin: 50px 50px 0px 50px;
+}
+.profile__hello {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+.profile__hello span {
+  color: red;
+}
+.profile__congrats {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.profile__data-container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.profile__data-charts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+.profile__charts {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  gap: 30px;
+  width: 100%;
+}
+.profile__nutritionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.profile__charts-miniGraph {
+  display: flex;
+  justify-content: space-between;
+  grid-column-end: span 3;
+}
+
+.nutriCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 250px;
+  height: 125px;
+  padding: 0 20px;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+}
+.nutriCard__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: inherit;
+}
+.nutriCard__img-Calories {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.nutriCard__img-Proteines {
+  background-color: rgba(74, 184, 255, 0.1);
+}
+.nutriCard__img-Glucides {
+  background-color: rgba(249, 206, 35, 0.1);
+}
+.nutriCard__img-Lipides {
+  background-color: rgba(253, 81, 129, 0.1);
+}
+.nutriCard__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin: auto auto auto 35px;
+  gap: 5px;
+  overflow: hidden;
+}
+.nutriCard__desc-info {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.nutriCard__desc-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(116, 121, 140);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.chart {
+  width: 100%;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barsChart__wrapper {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  z-index: 1;
+  background-color: #fbfbfb;
+  margin-bottom: 25px;
+}
+
+.barsChart__titleWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.barChart__title {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: black;
+}
+
+.barsChart__legend {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: black;
+}
+.barsChart__legend-item {
+  position: relative;
+  position: relative;
+  margin-left: 55px;
+  margin-top: 15px;
+}
+
+.barsChart__legend-item--grey-dot::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 20%;
+  aspect-ratio: 1/1;
+  height: 10px;
+  background-color: #282D30;
+  border-radius: 50%;
+}
+
+.barsChart__legend-item--red-dot::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 20%;
+  aspect-ratio: 1/1;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.barChart {
+  margin-top: 20px;
+  grid-column-end: span 3;
+  max-height: 400px;
+  min-width: 835px;
+}
+
+.lineChart {
+  height: 265px;
+  min-width: 300px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.radarChart {
+  background: #282D30;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+}
+
+.radarChart, .radialChart, .lineChart {
+  height: 300px;
+  width: 300px;
+}
+
+.radar-chart {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90px;
+  width: 60px;
+  font-size: 10px;
+  background-color: #E60000;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.error {
+  margin: auto;
+}
+
+@media screen and (max-width: 1430px) {
+  .profile__data-charts {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile__charts {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile__nutritionCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .nutriCard {
+    width: 40%;
+  }
+  .barChart {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .profile__data-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile__charts {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .profile__charts-miniGraph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .profile__nutritionCard {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile__data-charts {
+    flex-direction: column;
+  }
+  .profile__charts {
+    width: 690px;
+    margin: 0;
+  }
+  .profile__nutritionCard {
+    margin: auto;
+    flex-wrap: wrap;
+    width: 690px;
+  }
+}/*# sourceMappingURL=home.css.map */
