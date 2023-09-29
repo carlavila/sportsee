@@ -1,7 +1,7 @@
 import React from 'react';
 import { Radar, RadarChart as RadarC, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 import PropTypes from "prop-types"
-import formatData from "../services/FormatData";
+import formatData from "../../utils/FormatData";
 
 const RadarChart = ({data}) => {
 	console.log("data:", data.data);

@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 import PropTypes from "prop-types";
-import formatData from "../services/FormatData";
+import formatData from "../../utils/FormatData";
 
 export default class RadarChart extends PureComponent {
   render() {

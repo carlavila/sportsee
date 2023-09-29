@@ -2,18 +2,16 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { getData } from "../services/ApiCall";
-import BarsChart from "../components/BarsChart";
-import LineChart from "../components/LineChart";
-import RadarChart from "../components/RadarChart";
-import RadialChart from "../components/RadialChart";
-import NutritionCard from "../components/NutritionCard";
+import BarsChart from "../components/BarsChart/BarsChart";
+import LineChart from "../components/LineChart/LineChart";
+import RadarChart from "../components/RadarChart/RadarChart";
+import RadialChart from "../components/RadialChart/RadialChart";
+import NutritionCard from "../components/NutritionCard/NutritionCard";
 import "../style/style.scss";
-import {
-  UserData,
-  UserPerformanceData,
-  UserAvgSessionData,
-  UserActivityData,
-} from "../services/UserModels";
+import {UserData} from "../models/UserData/UserData";
+import {UserPerformanceData} from "../models/UserPerformance/UserPerformance";
+import {UserActivityData} from "../models/UserActivity/UserActivity";
+import {UserAvgSessionData} from "../models/UserAverage/UserAverage";
 import calories from '../assets/calories.png'
 import proteins from '../assets/proteins.png'
 import glucides from '../assets/glucides.png'

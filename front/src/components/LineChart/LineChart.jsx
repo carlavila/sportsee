@@ -1,6 +1,6 @@
 import { LineChart as LineC, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import PropTypes from "prop-types"
-import formatData from "../services/FormatData";
+import formatData from "../../utils/FormatData";
 
 const LineChart = ({data}) => {
   const format = new formatData();
