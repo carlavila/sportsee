@@ -15,40 +15,43 @@ export default class RadarChart extends PureComponent {
     return (
       <div className="radialChart">
         <ResponsiveContainer width="100%" height="100%">
-          <RadialBarChart
-            width={330}
-            height={250}
-            innerRadius={65}
-            outerRadius={80}
-            data={formatedData}
-            startAngle={startAngle}
-            endAngle={90 + (perfValue * 360) / 100}
-            margin={{
-              top: 0,
-              right: 0,
-              left: 0,
-              bottom: 0,
-            }}
-          >
-            <RadialBar
-              name="score"
-              dataKey="value"
-              stroke-linejoin="round"
-              fill="#E60000"
-              cornerRadius={100}
-            />
-            <text textAnchor="middle" fontSize={15} fontWeight={600}>
-              <tspan x="50%" y="50%" fontSize={22}>
-                {perfValue}%
-              </tspan>
-              <tspan x="50%" y="65.5%" fill={"#74798c"}>
-                de votre{" "}
-              </tspan>
-              <tspan x="50%" y="77%" fill={"#74798c"}>
-                objectif
-              </tspan>
-            </text>
-          </RadialBarChart>
+          <>
+            <h3 className="h3-score">Score</h3>
+            <RadialBarChart
+              width={330}
+              height={250}
+              innerRadius={65}
+              outerRadius={80}
+              data={formatedData}
+              startAngle={startAngle}
+              endAngle={90 + (perfValue * 360) / 100}
+              margin={{
+                top: 0,
+                right: 0,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <RadialBar
+                name="score"
+                dataKey="value"
+                stroke-linejoin="round"
+                fill="#E60000"
+                cornerRadius={100}
+              />
+              <text textAnchor="middle" fontSize={15} fontWeight={600}>
+                <tspan x="50%" y="50%" fontSize={22}>
+                  {perfValue}%
+                </tspan>
+                <tspan x="50%" y="65.5%" fill={"#74798c"}>
+                  de votre{" "}
+                </tspan>
+                <tspan x="50%" y="77%" fill={"#74798c"}>
+                  objectif
+                </tspan>
+              </text>
+            </RadialBarChart>
+          </>
         </ResponsiveContainer>
       </div>
     );

@@ -4,5 +4,4 @@ class UserActivityData {
     this.sessions = sessions;
   }
 }
-
 export { UserActivityData };

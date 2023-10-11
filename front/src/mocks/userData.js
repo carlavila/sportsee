@@ -106,7 +106,6 @@ export const USER_PERFORMANCE_DATA = [
     ]
   }
 ];
-
 export const USER_AVG_SESSION_DATA = [
   {
     userId: 12,

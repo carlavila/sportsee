@@ -1,37 +1,46 @@
-import React, { PureComponent } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import PropTypes from "prop-types"
+import React, { PureComponent } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import PropTypes from "prop-types";
 import formatData from "../../utils/FormatData";
-//import '../../style/components/_barschart.scss';
 
-
-const CustomToolTip = ({active, payload}) => {
-  if(active){
+const CustomToolTip = ({ active, payload }) => {
+  if (active) {
     return (
       <div className="tooltip">
         <p className="tooltip__calories">{payload[0].value}kg</p>
         <p className="tooltip__kg">{payload[1].value}Kcal</p>
       </div>
-    )
+    );
   }
-  return null
-}
+  return null;
+};
 
 export default class BarsChart extends PureComponent {
-  render(){
-	const format = new formatData();
+  render() {
+    const format = new formatData();
     const formattedData = format.formatDataBarsChart(this.props.data);
     return (
-      <div className='barsChart__wrapper'>
+      <div className="barsChart__wrapper">
         <div className="barsChart__titleWrapper">
-            <div className="barsChart__title">Activité quotidienne</div>
-            <div className="barsChart__legend">
-              <div className="barsChart__legend-item barsChart__legend-item--grey-dot">Poids (kg)</div>
-              <div className="barsChart__legend-item barsChart__legend-item--red-dot">Calories brûlées (kCal)</div>
+          <div className="barsChart__title">Activité quotidienne</div>
+          <div className="barsChart__legend">
+            <div className="barsChart__legend-item barsChart__legend-item--grey-dot">
+              Poids (kg)
+            </div>
+            <div className="barsChart__legend-item barsChart__legend-item--red-dot">
+              Calories brûlées (kCal)
+            </div>
           </div>
         </div>
         <ResponsiveContainer>
-          
           <BarChart
             width={500}
             height={300}
@@ -43,25 +52,41 @@ export default class BarsChart extends PureComponent {
             data={formattedData}
           >
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
-            <XAxis dataKey="day" tickLine={false} tickMargin={15} dy={15} stroke="1 1"/>
-            <YAxis 
+            <XAxis
+              dataKey="day"
+              tickLine={false}
+              tickMargin={15}
+              dy={15}
+              stroke="1 1"
+            />
+            <YAxis
               yAxisId="right"
               dataKey="kg"
               orientation="right"
               axisLine={false}
               tickLine={false}
-              tickMargin={35}    
-              domain={[0, 'dataMax + 10']}        
-              />
+              tickMargin={35}
+              domain={[0, "dataMax + 10"]}
+            />
             <YAxis
               yAxisId="left"
               dataKey="calories"
               orientation="left"
               hide={true}
             />
-            <Tooltip content={<CustomToolTip />} offset={50}/>
-            <Bar yAxisId="right" dataKey="kg" fill="#282D30" radius={[10, 10, 0, 0]}/>
-            <Bar yAxisId="left" dataKey="calories" fill="#E60000" radius={[10, 10, 0, 0]} />
+            <Tooltip content={<CustomToolTip />} offset={50} />
+            <Bar
+              yAxisId="right"
+              dataKey="kg"
+              fill="#282D30"
+              radius={[10, 10, 0, 0]}
+            />
+            <Bar
+              yAxisId="left"
+              dataKey="calories"
+              fill="#E60000"
+              radius={[10, 10, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -70,4 +95,4 @@ export default class BarsChart extends PureComponent {
 }
 BarsChart.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};

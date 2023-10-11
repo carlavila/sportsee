@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import '../style.scss';
 
 .sideBar{
     @include flex(column, space-around, center);
@@ -26,12 +26,12 @@
         }
         img{
             width: 40px;
-            height: 40px;
         }
     }
     &__copyright{
         color: white;
+        font-size: 9px;
         white-space: nowrap;
-        rotate: 270deg;
+        transform: rotate(-90deg);
     }
 }
