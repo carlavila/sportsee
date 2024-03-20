@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+Backend
+
+Clone the backend repository with git clone https://github.com/kidereo/oc-p012-backend.git.
+Use Terminal to navigate to your local repo folder. Once there, install dependencies with npm install.
+Launch the backend with npm run start.
+If all goes well, you should receive the console message Magic happens on port 3003 and the backend will become available on http://localhost:3003. If anything goes wrong, start again.
+At this point, you can use Postman to start sending requests to the SportSee API or launch the frontend for project visuals.
+Frontend
+
+Clone the frontend repository with git clone https://github.com/kidereo/oc-p012-frontend.git.
+Use Terminal to navigate to your local repo folder. Once there, install dependencies with npm install.
+Launch the backend with npm start.
+If all goes well, you should receive the console message You can now view the project in the browser and the dashboard will become available on http://localhost:3000.
+If anything goes wrong, start again.
